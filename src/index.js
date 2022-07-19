@@ -84,7 +84,7 @@ let enterCityForm = document.querySelector("#search-city");
 enterCityForm.addEventListener("submit", showCity);
 
 function showTemperature(response) {
-  console.log(response);
+  console.log(response.date);
   let temperature = Math.round(response.data.main.temp);
   let description = response.data.weather[0].description;
   let cityName = response.data.name;
@@ -112,3 +112,21 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector("#current");
 button.addEventListener("click", getCurrentPosition);
+
+function toFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 66;
+}
+
+function toCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 17;
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", toFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", toCelsius);
