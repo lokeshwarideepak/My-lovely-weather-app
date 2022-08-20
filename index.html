@@ -13,20 +13,59 @@
        <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-  <form id="search-city">
+  <form>
     <div class="row">
-            <input type="search" placeholder="Enter your city "
-             autocomplete="off" autofocus="on" id= "city-input"/> </div>
-             <br>
-      <button id="search" type="submit"><strong>Search</strong></button>
-	  <button id="current" type="button">📍</button>
-       </form>
-    
-</div>
-<br />
-<br />
- <h1>
-     <div class="show-city" id="show-city">
+      <div class="col-9 ">
+            <input type="search" placeholder="Enter your city" 
+            class="serach-city">
+      </div>
+    </div class="col-3 p-0">
+    <input type="Submit" class="btn btn-primary w-100" value="Search">
+    </div>
+  </div>
+    </form>
+        
+  <div class="WWeatherInfo">
+  <div class="row">
+    <div class="col-6">
+      <h1>Perth</h1>
+      <ul>
+        <li>
+          <span>
+            "Sunday"
+            "15"
+            ";"
+            "26"
+          </span>
+          ", "
+          "Clear sky"
+        </li>
+        <li>
+          "Humidity:"
+          <strong>
+            "69"
+            "%"
+          </strong>
+          ", Wind:"
+          <strong>
+            "2.57"
+            "Km/h"
+          </strong>
+           </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <div class="temperature-container d-flex justify-content-end">
+        <canvas width="52" height="52">
+          <div>
+<span class="temperature">24</span>
+<span class="unit">°C</span>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="show-city" id="show-city">
   <em>Perth</em>
     <br >
   </div>
