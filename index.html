@@ -13,11 +13,20 @@
        <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-  <form>
-    <div class="row">
-      <div class="col-9 ">
-            <input type="search" placeholder="Enter your city" 
-            class="serach-city">
+  <form id="search-city">
+  </form>
+    <div class="row">    
+       <input type="search" placeholder="Enter your city "
+             autocomplete="off" autofocus="on" id= "city-input"/> </div>
+             <br>
+      <button id="search" type="submit"><strong>Search</strong></button>
+	  <button id="current" type="button">📍</button>
+       </form>
+    </div>
+<br />
+<br />
+ <h1>
+     <div class="show-city" id="show-city">
       </div>
     </div class="col-3 p-0">
     <input type="Submit" class="btn btn-primary w-100" value="Search">
@@ -25,9 +34,8 @@
   </div>
     </form>
         
-  <div class="WWeatherInfo">
-  <div class="row">
-    <div class="col-6">
+  <div class="WeatherInfo">
+  
       <h1>Perth</h1>
       <ul>
         <li>
