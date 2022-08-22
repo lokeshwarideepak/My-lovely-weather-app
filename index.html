@@ -13,85 +13,59 @@
        <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-  <form id="search-city">
-   <div class="row">    
-     <input type="search" placeholder="Enter your city.. "
-    autocomplete="off" autofocus="on" id= "city-input"/> 
-    <button id="search" type="submit"><strong>Search</strong></button>
-	  <button id="current" type="button">📍</button>   
-    </form>
-   
-  <div class="WeatherInfo">
-  <h1><em>Perth</em></h1>
-  </div>
-    </div>   
-<h2>
-      <span class="temperature" id="current-temp">17</span>
-          <span class="units">
-            <a href="#" class="units"id="celsius-link">°C</a> |
-						<a href="#" class="units"id="fahrenheit-link">°F</a>
-        <br /> 
-        <div class="row">
-      <div class="col card-description" id="current-description"> 
-        
-        <img src="https://www.pinclipart.com/picdir/big/7-76157_clouds-sun-and-rain-drops-weather-icon-png.png" 
-        alt="partly_cloudy" width="75">
-         </div>
-        </div>
-          </span>
-        </span>
-</h2>
-<h3><div class="context">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <p class="weatherAppDate" id="weather-app-date"></p>
+   <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city">Perth</h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
           </div>
-        </div>
-          </h3>
-  <h4>
-      <div class="col">
-    <ul class="today-info">
-        <li id="Preciptation"><em>Precipitation: 15%</em></li>
-        <li id="humidity"><em>Humidity: 77%</em></li>
-        <li id="windSpeed"><em>Wind: 5 km/h</em></li>
-    </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
     </div>
-    
-    <div class="row">
-      <div class="col card-forecast" id="card-forecast"> 
-     <h5>Mon</h5>
-    <img src="https://icon-library.com/images/rainy-icon/rainy-icon-3.jpg" alt="rainy" width="70">
-    <p>23°/ 12°</p>
-    </div> <br />
-    <div class="col card-forecast">
-    <h5>Tue</h5>
-    <img src="https://www.pngkey.com/png/full/158-1586404_thunderstorm-clipart-clipart-thunderstorm.png" alt="thunderstrom" width="70">
-    <p>26°/ 12°</p>
-    </div> <br />
-    <div class="col card-forecast">
-    <h5>Wed</h5>
-    <img src="https://www.pinclipart.com/picdir/big/7-76157_clouds-sun-and-rain-drops-weather-icon-png.png" alt="partially-cloud" width="70">
-    <p>30°/ 16°</p>
-    </div> <br />
-    <div class="col card-forecast">
-    <h5>Thu</h5>
-    <img src="https://www.pinclipart.com/picdir/big/7-76157_clouds-sun-and-rain-drops-weather-icon-png.png" alt="partially-cloud" width="70">
-    <p>32°/ 18°</p>
-    </div> <br />
-    <div class="col card-forecast">
-    <h5>Fri</h5>
-    <img src="https://icon-library.com/images/rainy-icon/rainy-icon-3.jpg" alt="rainy" width="70">
-    <p>34°/ 28°</p>
-    </div> <br />
-    <div class="col card-forecast">
-    <h5>Sat</h5>
-    <img src="https://icon-library.com/images/rainy-icon/rainy-icon-3.jpg" alt="rainy" width="70">
-    <p>34°/ 28°</p>
-    </div> <br />
-    </div>
-    </div>
- <p class="footer text-center">
+<p class="footer text-center">
        <a href="https://github.com/lokeshwarideepak/My-lovely-weather-app"
         target="_blank"> Open Source Code</a> <strong><em>by Lokeshwari Deepak</em></strong></p>   
      <script src="src/index.js"></script>
