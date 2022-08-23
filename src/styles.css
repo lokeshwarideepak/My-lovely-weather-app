@@ -54,6 +54,7 @@ li:first-letter {
 
 .overview {
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .weather-temperature img {
