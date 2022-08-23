@@ -94,3 +94,9 @@ li:first-letter {
   font-size: 16px;
   color: #000;
 }
+
+.weather-forecast-temperature {
+color: #000;
+text-align: center;
+
+}
