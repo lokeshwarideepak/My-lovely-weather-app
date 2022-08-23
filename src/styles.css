@@ -84,7 +84,13 @@ li:first-letter {
   text-decoration: none;
 }
 
-.weatherForecast {
+.weather-forecast {
   text-align: center;
+  margin-top: 20px;
   box-sizing: border-box;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  color: #000;
 }
