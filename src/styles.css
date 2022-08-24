@@ -1,9 +1,10 @@
 body {
-   background: linear-gradient( 90.2deg,
-   rgba(211, 121, 211, 0.93) -12.6%,
-    rgb(171, 129, 211) -15.6%,
-     rgba(199, 145, 204, 0.9) 17.0%,
-      rgb(95, 63, 97) 80.6% );
+  background: linear-gradient( 90.2deg,
+   rgba(13, 70, 102, 0.93) -12.6%,
+    rgb(25, 154, 154) -15.6%,
+     rgba(19, 70, 102, 0.9) 17.0%,
+      rgb(38, 13, 40) 80.6% );
+ 
   color: #e2cd13;
   display: block;
   max-width: 675px;
