@@ -81,7 +81,7 @@ forecastHTML =
 forecastHTML +
 `
    <div class="col-2">
-          <div class="weather-forecast-day">${day}</div>
+          <div class="weather-forecast-date">${day}</div>
           <img src="http://openweathermap.org/img/wn/02d@2x.png"
           alt="" width="44"
           />
@@ -93,9 +93,9 @@ forecastHTML +
 `;
 });
 
-forecastHTML = forecastHTML +`</div>`;
+forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
-console.log(forecastHTML);
+
 }
 
 function getForecast(coordinates) {

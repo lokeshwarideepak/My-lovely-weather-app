@@ -91,7 +91,7 @@ li:first-letter {
   box-sizing: border-box;
 }
 
-.weather-forecast-day {
+.weather-forecast-date {
   font-size: 16px;
   color: #000;
   opacity: 0.5;
