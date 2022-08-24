@@ -1,12 +1,13 @@
-setInterval(displayTimeAndDate, 1000);
-
-function displayTimeAndDate() {
-  let now = new Date();
-  let date = now.getDate();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let year = now.getFullYear();
-  let seconds = now.getSeconds();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   let days = [
     "Sunday",
@@ -17,57 +18,18 @@ function displayTimeAndDate() {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
-
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  let month = months[now.getMonth()];
-
-  let weatherAppDate = document.querySelector("#weather-app-date");
-
-  let formattedSeconds;
-  let formattedHours;
-  let formattedMinutes;
-  let timeOfDay;
-
-  if (seconds < 10) {
-    formattedSeconds = `0${seconds}`;
-  } else {
-    formattedSeconds = seconds;
-  }
-
-  if (hours < 10) {
-    formattedHours = `0${hours}`;
-  } else {
-    formattedHours = hours;
-  }
-
-  if (minutes < 10) {
-    formattedMinutes = `0${minutes}`;
-  } else {
-    formattedMinutes = minutes;
-  }
-
-  if (hours >= 12) {
-    timeOfDay = `PM`;
-  } else {
-    timeOfDay = `AM`;
-  }
-  weatherAppDate.innerHTML = `${day} ${month} ${date} ${year} | ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${timeOfDay}`;
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -86,8 +48,7 @@ forecastHTML =
 `
    <div class="col-2">
           <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-          <img src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon}@2x.png"
+          <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
           alt="" width="44"
           />
           <div class="weather-forecast-temperatures">
