@@ -69,7 +69,6 @@ function displayTimeAndDate() {
   weatherAppDate.innerHTML = `${day} ${month} ${date} ${year} | ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${timeOfDay}`;
 }
 
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
