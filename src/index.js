@@ -80,6 +80,7 @@ forecast.forEach(function(forecastDay, index) {
 
   }
 }
+
 forecastHTML =
  forecastHTML +
 `
