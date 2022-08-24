@@ -66,7 +66,7 @@ function displayTimeAndDate() {
   } else {
     timeOfDay = `AM`;
   }
-  weatherAppDate.innerHTML = `${day} ${month} ${date} ${year} | ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${timeOfDay}`;
+  weatherAppDate.innerHTML = `${day} ${date} ${month} ${year} | ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${timeOfDay}`;
 }
 
 function displayForecast(response) {
@@ -84,7 +84,8 @@ forecastHTML =
  forecastHTML +
 `
    <div class="col-2">
-          <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+          <div class="weather-forecast-date">${formatDay
+            (forecastDay.dt)}</div>
           <img src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon}@2x.png"
           alt="" width="44"
