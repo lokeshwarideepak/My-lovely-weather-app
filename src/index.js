@@ -108,7 +108,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
@@ -174,8 +174,7 @@ function displayTemperature(response) {
 
 function search(city) {
   let apiKey = "3b6843c21c9e3001b9979f4f906678e2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?
-  q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
