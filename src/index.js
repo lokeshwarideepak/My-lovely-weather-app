@@ -36,7 +36,7 @@ function displayTimeAndDate() {
 
   let month = months[now.getMonth()];
 
-  let weatherAppDate = document.querySelector("#weather-app-date");
+  let weatherAppDate = document.querySelector("#date");
 
   let formattedSeconds;
   let formattedHours;
@@ -146,7 +146,7 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#weatherAppDate");
+  let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
