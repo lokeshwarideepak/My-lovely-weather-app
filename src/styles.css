@@ -90,18 +90,22 @@ li:first-letter {
 
 .weather-forecast {
   text-align: center;
+  font-size: 15px;
   margin-top: 20px;
   color: #000;
   box-sizing: border-box;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
   opacity: 0.5;
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+
 }
 
 .weather-forecast-temperature {
